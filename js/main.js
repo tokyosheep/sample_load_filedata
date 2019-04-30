@@ -52,9 +52,9 @@ window.onload = function(){
             const img = new Image();
             img.src = filePath;
             img.onload = () =>{//img要素の取得は非同期なので注意
-                const width = writeLi(`width:: ${img.width}`);//画像データの高さと幅を読み込み
+                const width = writeLi(`width:: ${img.naturalWidth}`);//画像データの高さと幅を読み込み
                 parent.appendChild(width);
-                const height = writeLi(`height:: ${img.height}`);
+                const height = writeLi(`height:: ${img.naturalHeight}`);
                 parent.appendChild(height);
             }
         }
